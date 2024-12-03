@@ -50,25 +50,61 @@ window.addEventListener('scroll', function() {
 
 
 // Hobbies script for the Interactive Graph
-var ctx = document.getElementById('hobbyChart').getContext('2d');
-var hobbyChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Photography', 'Videography', 'Cycling', 'Development/Coding', 'Data Analysis', 'Process Optimization', 'Tech'],
-    datasets: [{
-      label: 'Hobbies',
-      data: [4, 2, 3, 1, 4, 5, 5],
-      backgroundColor: ['#ff5733', '#33c4ff', '#9e33ff', '#ff9933', '#33ff66', '#ff3366', '#33cc99'],
-      borderColor: ['#ff5733', '#33c4ff', '#9e33ff', '#ff9933', '#33ff66', '#ff3366', '#33cc99'],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    responsive: true,
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the context of the canvas
+    const ctx = document.getElementById('hobbyChart').getContext('2d');
+
+    // Define the hobby data
+    const hobbyData = {
+        labels: ['Photography', 'Videography', 'Cycling', 'Development / Coding', 'Data Analysis', 'Process Optimisation', 'Tech Research'],
+        datasets: [{
+            label: 'Hobbies',
+            data: [4, 2, 3, 1, 4, 5, 5], // The points for each hobby
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(0, 255, 255, 0.2)' // Add a different color for each hobby
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(0, 255, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    };
+
+    // Create the chart
+    const hobbyChart = new Chart(ctx, {
+        type: 'bar', // This defines the type of chart (Bar chart)
+        data: hobbyData,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true, // Starts the y-axis at 0
+                    max: 6 // Set max value for better visual scaling
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'top', // Adjust the legend position if needed
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.raw + " points"; // Custom tooltip format
+                        }
+                    }
+                }
+            }
+        });
 });
+
