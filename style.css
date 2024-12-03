@@ -14,7 +14,6 @@ body {
 }
 
 /* Navbar Styles */
-/* Sticky Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -23,12 +22,11 @@ body {
     background-color: #333;
     z-index: 1000;
     transition: top 0.3s;
-  }
-  
-  /* For smooth transition when the navbar hides */
-  .hide-navbar {
+}
+
+.hide-navbar {
     top: -60px; /* Adjust based on navbar height */
-  }
+}
 
 .nav-links {
     list-style-type: none;
@@ -169,47 +167,33 @@ html {
     text-align: center;
 }
 
-/* Make sure the container of both sections uses flexbox */
-.container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensures that the content wraps on smaller screens */
-}
-
-/* Individual chart styling */
-.skills-chart, .hobbies-chart {
-    flex: 1; /* Each chart takes up an equal portion of the available space */
-    max-width: 48%; /* Ensures that the charts don't overflow on larger screens */
-    margin: 0 auto;
-    padding-top: 20px;
-}
-
-/* Canvas styling to make sure charts don't stretch too much */
-canvas {
-    display: block;
-    width: 100%; /* Ensures that the chart fills the container */
-    height: auto; /* Maintains the aspect ratio */
-}
-
-/* Header styling for the sections */
 #skills h2, #hobbies h2 {
     font-size: 2rem;
     color: white;
     margin-bottom: 20px;
 }
 
-/* Footer Styling */
-footer {
-    background-color: #111;
-    padding: 20px;
-    text-align: center;
+/* Flexbox for layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
-footer p {
-    color: #aaa;
+/* Styling for the charts (Skills and Hobbies) */
+.skills-chart, .hobbies-chart {
+    flex: 1 1 calc(50% - 20px); /* Adjust width to allow space between charts */
+    max-width: 48%;
+    margin: 0 auto;
+    padding-top: 20px;
 }
 
+canvas {
+    display: block;
+    width: 100%; /* Ensures that the chart fills the container */
+    height: auto; /* Maintains the aspect ratio */
+}
 
 /* Alert Box Styling */
 .alert-box {
@@ -244,7 +228,6 @@ footer p {
 .close-btn:hover {
     transform: scale(1.2);
 }
-
 
 /* Fade-in animation */
 @keyframes fadeIn {
