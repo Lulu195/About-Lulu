@@ -195,7 +195,7 @@ canvas {
 }
 
 /* Close Button Styling */
-.alert-box .close-btn {
+.close-btn {
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -209,9 +209,10 @@ canvas {
     transition: transform 0.2s ease-in-out;
 }
 
-.alert-box .close-btn:hover {
+.close-btn:hover {
     transform: scale(1.2);
 }
+
 
 /* Fade-in animation */
 @keyframes fadeIn {
