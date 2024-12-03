@@ -105,6 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 }
             }
-        });
+        } 
+    }); 
 });
-
