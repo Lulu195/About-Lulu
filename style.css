@@ -1,89 +1,163 @@
-/* Reset default margins and paddings */
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic body and background styling */
+/* Body and font settings */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #121212;
-    color: white;
+    color: #f1f1f1;
     line-height: 1.6;
+    padding: 0;
+    margin: 0;
 }
 
-/* Avatar Image Styling */
+/* Header Section */
+header {
+    background: #1d1d1d;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
 #avatar {
-    width: 150px; /* Resize the avatar to 150px width */
-    height: 150px; /* Keep the height equal to the width for a square avatar */
-    border-radius: 50%; /* Circular image */
-    object-fit: cover; /* Ensures the image fills the container without stretching */
-    margin: 20px 0; /* Adds spacing around the image */
-    display: block; /* Centers the image within its container */
-    margin-left: auto;  margin-right: auto; /* Center the avatar image horizontally */
-}
-
-
-/* Fade-in effect for elements */
-.fade-in {
-    opacity: 0;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 1rem;
     transition: opacity 1s ease-in-out;
 }
 
-.fade-in-active {
-    opacity: 1;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-header {
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 1rem 0;
     text-align: center;
-    padding: 50px 0;
 }
 
-h1 {
-    font-size: 3rem;
+.nav-links {
+    list-style: none;
 }
 
-.tagline {
-    font-size: 1.5rem;
-    color: #4CAF50; /* Vibrant green for flair */
+.nav-links li {
+    display: inline-block;
+    margin: 0 20px;
 }
 
-section {
-    padding: 40px 0;
-}
-
-a {
-    color: #FF5722; /* Bright accent color */
+.nav-links a {
     text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
 }
 
-a:hover {
+.nav-links a:hover {
+    color: #ff5722;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+    background-color: #1a1a1a;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+.hero-content .avatar {
+    margin-right: 2rem;
+}
+
+.hero-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.bio {
+    max-width: 500px;
+}
+
+.bio h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.bio p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Blog Section */
+#blog {
+    background: #121212;
+    padding: 2rem;
+    text-align: center;
+}
+
+#blog h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#blog p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+#blog a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#blog a:hover {
     text-decoration: underline;
 }
 
-footer {
+/* Contact Section */
+#contact {
+    background: #1a1a1a;
+    padding: 2rem;
     text-align: center;
-    padding: 20px 0;
-    background-color: #333;
 }
 
-/* Mobile responsive design */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .tagline {
-        font-size: 1.2rem;
-    }
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
+
+#contact a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    pa
