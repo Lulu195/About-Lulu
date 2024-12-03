@@ -33,3 +33,17 @@ clickableElements.forEach(element => {
         element.style.transform = "scale(1)";
     });
 });
+
+// Generic showing/hiding navbar on scroll
+let lastScrollTop = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function() {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  if (currentScroll > lastScrollTop) {
+    navbar.classList.add('hide-navbar'); // Scroll down, hide navbar
+  } else {
+    navbar.classList.remove('hide-navbar'); // Scroll up, show navbar
+  }
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+}, false);
