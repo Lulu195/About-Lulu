@@ -162,39 +162,41 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Charts Section */
-#charts {
+/* Skills and Hobby Section */
+#skills, #hobbies {
     padding: 60px 20px;
     background-color: #222;
-}
-
-.chart-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns for hobby and skills */
-    grid-gap: 20px; /* Space between the sections */
-}
-
-.chart-item {
     text-align: center;
 }
 
-h2 {
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 20px;
+/* Make sure the container of both sections uses flexbox */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures that the content wraps on smaller screens */
 }
 
-/* Canvas and chart styling */
-.skills-chart, .hobby-chart {
-    max-width: 500px;
+/* Individual chart styling */
+.skills-chart, .hobbies-chart {
+    flex: 1; /* Each chart takes up an equal portion of the available space */
+    max-width: 48%; /* Ensures that the charts don't overflow on larger screens */
     margin: 0 auto;
     padding-top: 20px;
 }
 
+/* Canvas styling to make sure charts don't stretch too much */
 canvas {
     display: block;
-    width: 100%;
-    height: auto;
+    width: 100%; /* Ensures that the chart fills the container */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+/* Header styling for the sections */
+#skills h2, #hobbies h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
 }
 
 /* Footer Styling */
