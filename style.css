@@ -162,37 +162,30 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Add a container for the hobbies chart */
-section {
+/* Charts Section */
+#charts {
     padding: 60px 20px;
     background-color: #222;
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns for hobby and skills */
+    grid-gap: 20px; /* Space between the sections */
+}
+
+.chart-item {
     text-align: center;
 }
 
-/* Restrict chart size */
-canvas {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    max-height: 400px; /* Adjust this value as needed */
-    margin: 0 auto;
-    display: block;
-}
-
-/* Skills Section */
-#skills {
-    padding: 60px 20px;
-    background-color: #222;
-    text-align: center;
-}
-
-#skills h2 {
+h2 {
     font-size: 2rem;
     color: white;
     margin-bottom: 20px;
 }
 
-.skills-chart {
+/* Canvas and chart styling */
+.skills-chart, .hobby-chart {
     max-width: 500px;
     margin: 0 auto;
     padding-top: 20px;
@@ -202,6 +195,17 @@ canvas {
     display: block;
     width: 100%;
     height: auto;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: #aaa;
 }
 
 
