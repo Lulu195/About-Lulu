@@ -198,6 +198,13 @@ canvas {
     padding-top: 20px;
 }
 
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
 /* Alert Box Styling */
 .alert-box {
     background-color: #ffc107; /* Warning yellow */

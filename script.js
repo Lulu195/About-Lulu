@@ -111,20 +111,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Skills Chart for the Interactive Chart
 document.addEventListener("DOMContentLoaded", function () {
+    // Get the context of the canvas
     const ctx = document.getElementById('skillsChart').getContext('2d');
 
+    // Define the skills data
     const skillsData = {
-        labels: ['JavaScript', 'Python', 'HTML/CSS', 'React', 'Node.js', 'Git'],
+        labels: ['Continuous Process Improvement', 'Cross-Functional Team Management', 'Strategic Data Analysis', 'Microsoft Office Pack', 'Scheduling', 'PowerBI', 'Vendor Management'],
         datasets: [{
-            label: 'Skills Proficiency',
-            data: [5, 4, 5, 3, 4, 5], // Skill proficiency on a scale from 1-5
+            label: 'Skills',
+            data: [4, 5, 4, 3, 3, 4, 2], // The points for each skill
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
                 'rgba(75, 192, 192, 0.2)',
                 'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(0, 255, 255, 0.2)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -132,36 +135,38 @@ document.addEventListener("DOMContentLoaded", function () {
                 'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
                 'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(255, 159, 64, 1)',
+                'rgba(0, 255, 255, 1)'
             ],
             borderWidth: 1
         }]
     };
 
+    // Create the chart
     const skillsChart = new Chart(ctx, {
-        type: 'bar', // Bar chart for skills
+        type: 'bar', // This defines the type of chart (Bar chart)
         data: skillsData,
         options: {
             scales: {
                 y: {
-                    beginAtZero: true, // Start y-axis at 0
-                    max: 6 // Set max value to 6 for better visual scaling
+                    beginAtZero: true, // Starts the y-axis at 0
+                    max: 6 // Set max value for better visual scaling
                 }
             },
             plugins: {
                 legend: {
-                    position: 'top'
+                    position: 'top', // Adjust the legend position if needed
                 },
                 tooltip: {
                     callbacks: {
                         label: function(tooltipItem) {
-                            return tooltipItem.raw + " points"; // Custom tooltip
+                            return tooltipItem.raw + " points"; // Custom tooltip format
                         }
                     }
                 }
             }
-        } 
-    }); 
+        }
+    });
 });
 
 // Alert Box
