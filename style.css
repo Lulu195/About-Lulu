@@ -161,3 +161,20 @@ footer p {
 html {
     scroll-behavior: smooth;
 }
+
+/* Add a container for the hobbies chart */
+section {
+    padding: 60px 20px;
+    background-color: #222;
+    text-align: center;
+}
+
+/* Restrict chart size */
+canvas {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Adjust this value as needed */
+    margin: 0 auto;
+    display: block;
+}
