@@ -109,6 +109,61 @@ document.addEventListener("DOMContentLoaded", function () {
     }); 
 });
 
+// Skills Chart for the Interactive Chart
+document.addEventListener("DOMContentLoaded", function () {
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+
+    const skillsData = {
+        labels: ['JavaScript', 'Python', 'HTML/CSS', 'React', 'Node.js', 'Git'],
+        datasets: [{
+            label: 'Skills Proficiency',
+            data: [5, 4, 5, 3, 4, 5], // Skill proficiency on a scale from 1-5
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    };
+
+    const skillsChart = new Chart(ctx, {
+        type: 'bar', // Bar chart for skills
+        data: skillsData,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true, // Start y-axis at 0
+                    max: 6 // Set max value to 6 for better visual scaling
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'top'
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.raw + " points"; // Custom tooltip
+                        }
+                    }
+                }
+            }
+        } 
+    }); 
+});
+
 // Alert Box
 function dismissAlert() {
     const alertBox = document.getElementById('alertBox');

@@ -179,6 +179,25 @@ canvas {
     display: block;
 }
 
+/* Skills Section */
+#skills {
+    padding: 60px 20px;
+    background-color: #222;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.skills-chart {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
 /* Alert Box Styling */
 .alert-box {
     background-color: #ffc107; /* Warning yellow */
