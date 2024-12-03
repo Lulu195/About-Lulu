@@ -1,4 +1,4 @@
-/* Base Reset */
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,178 +9,142 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #121212;
-    color: #f1f1f1;
+    color: #fff;
     line-height: 1.6;
-    padding: 0;
-    margin: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1db954;
 }
 
 /* Header Section */
 header {
-    background: #1d1d1d;
-    padding: 2rem 0;
     text-align: center;
+    padding-top: 80px; /* To account for fixed navbar */
+}
+
+header .container {
+    margin-top: 50px;
+    padding-bottom: 40px;
 }
 
 header h1 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #fff;
-    margin-bottom: 1rem;
+    color: white;
 }
 
 #avatar {
-    border-radius: 50%;
     width: 150px;
     height: 150px;
-    object-fit: cover;
-    margin-top: 1rem;
-    transition: opacity 1s ease-in-out;
+    border-radius: 50%;
+    margin-top: 20px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
 }
 
-/* Navbar */
-.navbar {
-    background-color: #333;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-.nav-links {
-    list-style: none;
-}
-
-.nav-links li {
-    display: inline-block;
-    margin: 0 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 400;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #ff5722;
+#avatar.fade-in-active {
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* Hero Section */
 #hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 0;
+    padding: 100px 20px;
     background-color: #1a1a1a;
+    text-align: center;
 }
 
 .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1000px;
-}
-
-.hero-content .avatar {
-    margin-right: 2rem;
-}
-
-.hero-content img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .bio {
-    max-width: 500px;
+    font-size: 1.1rem;
+    color: #dcdcdc;
+    margin-top: 20px;
 }
 
 .bio h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
 }
 
-.bio p {
+/* Blog and Contact Sections */
+section {
+    padding: 60px 20px;
+    background-color: #222;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+p {
     font-size: 1.1rem;
-    line-height: 1.7;
+    color: #ccc;
+    margin-bottom: 15px;
 }
 
-/* Blog Section */
-#blog {
-    background: #121212;
-    padding: 2rem;
-    text-align: center;
-}
-
-#blog h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-#blog p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-#blog a {
-    color: #ff5722;
+a {
+    color: #1db954;
     text-decoration: none;
-    font-weight: 500;
 }
 
-#blog a:hover {
+a:hover {
     text-decoration: underline;
 }
 
-/* Contact Section */
-#contact {
-    background: #1a1a1a;
-    padding: 2rem;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-#contact a {
-    color: #ff5722;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
+/* Footer Section */
 footer {
-    background-color: #121212;
-    padding: 1rem;
+    background-color: #111;
+    padding: 20px;
     text-align: center;
-    color: #fff;
-    font-size: 0.9rem;
 }
 
-/* Fade-in effect */
-.fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+footer p {
+    color: #aaa;
 }
 
-.fade-in-active {
-    opacity: 1;
-}
-
-/* Hover effects for clickable elements */
-a, button {
-    transition: transform 0.3s ease;
-}
-
-a:hover, button:hover {
-    transform: scale(1.1);
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
