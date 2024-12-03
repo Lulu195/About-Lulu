@@ -78,9 +78,16 @@ header h1 {
     transition: opacity 0.5s ease-in, transform 0.5s ease-in;
 }
 
-#avatar.fade-in-active {
+/* General Fade-in effect for any element */
+.fade-in {
+    opacity: 0;
+    transform: scale(0.9); /* Slightly smaller to make the transition smoother */
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+.fade-in-active {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1); /* Original size when active */
 }
 
 /* Hero Section */
