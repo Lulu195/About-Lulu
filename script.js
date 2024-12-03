@@ -47,3 +47,28 @@ window.addEventListener('scroll', function() {
   }
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
+
+
+// Hobbies script for the Interactive Graph
+var ctx = document.getElementById('hobbyChart').getContext('2d');
+var hobbyChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Photography', 'Videography', 'Cycling', 'Development/Coding', 'Data Analysis', 'Process Optimization', 'Tech'],
+    datasets: [{
+      label: 'Hobbies',
+      data: [4, 2, 3, 1, 4, 5, 5],
+      backgroundColor: ['#ff5733', '#33c4ff', '#9e33ff', '#ff9933', '#33ff66', '#ff3366', '#33cc99'],
+      borderColor: ['#ff5733', '#33c4ff', '#9e33ff', '#ff9933', '#33ff66', '#ff3366', '#33cc99'],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
