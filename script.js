@@ -108,3 +108,12 @@ document.addEventListener("DOMContentLoaded", function () {
         } 
     }); 
 });
+
+// Alert Box
+function dismissAlert() {
+    const alertBox = document.getElementById('alertBox');
+    alertBox.classList.add('fade-out');
+    alertBox.addEventListener('animationend', () => {
+        alertBox.style.display = 'none';
+    });
+}
