@@ -14,15 +14,21 @@ body {
 }
 
 /* Navbar Styles */
+/* Sticky Navbar */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 15px 0;
+    background-color: #333;
     z-index: 1000;
-}
+    transition: top 0.3s;
+  }
+  
+  /* For smooth transition when the navbar hides */
+  .hide-navbar {
+    top: -60px; /* Adjust based on navbar height */
+  }
 
 .nav-links {
     list-style-type: none;
