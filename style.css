@@ -13,6 +13,28 @@ body {
     line-height: 1.6;
 }
 
+/* Avatar Image Styling */
+#avatar {
+    width: 150px; /* Resize the avatar to 150px width */
+    height: 150px; /* Keep the height equal to the width for a square avatar */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensures the image fills the container without stretching */
+    margin: 20px 0; /* Adds spacing around the image */
+    display: block; /* Centers the image within its container */
+    margin-left: auto;  margin-right: auto; /* Center the avatar image horizontally */
+}
+
+
+/* Fade-in effect for elements */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in-active {
+    opacity: 1;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -64,14 +86,4 @@ footer {
     .tagline {
         font-size: 1.2rem;
     }
-}
-
-/* Fade-in effect for elements */
-.fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.fade-in-active {
-    opacity: 1;
 }
